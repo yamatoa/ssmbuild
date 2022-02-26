@@ -23,7 +23,7 @@
     <%-- 看一下SQL语句， 能否执行成功：SQL执行失败，修改未完成--%>
     <%-- 前端传递隐藏域--%>
 
-    <form action="${pageContext.request.contextPath}/book/updateBook" method="post">
+    <form action="${pageContext.request.contextPath}/book/updateBook " method="post">
 
         <input type="hidden" name="bookID" value="${QBook.bookID}">
         <div class="form-group">
