@@ -74,6 +74,10 @@ public class BookController {
         System.err.println("books=>"+books);
         List<Books> list  = new ArrayList<Books>();
         list.add(books);
+        if(books == null){
+            list = bookService.queryAllBook();
+            model.addAttribute("error","未查询到信息，请仔细核对书名，感谢您的合作");
+        }
         model.addAttribute("list", list);
         return "allBook";
     }
